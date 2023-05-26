@@ -1,6 +1,10 @@
 :root {
   --primary-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
+  --primary-text-color-dark-theme: #ffffff;
+  --primary-text-color-light-theme: #303030;
+  --secondary-text-color-dark-theme: #9da4bd;
+  --secondary-text-color-light-theme: #555555;
   --accent-color: #ff6c00;
 }
 .list {
@@ -25,12 +29,18 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  /* color: #FFFFFF; */
+  /* color: var(--primary-text-color-dark-theme); */
   color: black;
 }
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--accent-color);
+}
+.modal-btn-theme-light {
+  color: var(--primary-text-color-theme-light);
+}
+.modal-btn-theme-dark {
+  color: var(--primary-text-color-theme-dark);
 }
 .media-list-link {
   font-weight: 600;
@@ -38,7 +48,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.2em;
 
-  color: #303030;
+  color: var(--primary-text-color-light-theme);
 }
 .media-list-link:hover,
 .media-list-link:focus {
@@ -55,7 +65,7 @@ body {
   color: rgba(157, 164, 189, 0.6);
 }
 .subtitle-light-theme {
-  color: #303030;
+  color: var(--primary-text-color-light-theme);
 }
 .section-description {
   font-weight: 400;
@@ -64,10 +74,23 @@ body {
   letter-spacing: 0.02em;
 }
 .section-description-dark-theme {
-  color: #9da4bd;
+  color: var(--secondary-text-color-dark-theme);
 }
 .section-description-light-theme {
-  color: #555555;
+  color: var(--secondary-text-color-light-theme);
+}
+.title {
+  font-family: var(--secondary-font);
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.title-light-theme {
+  color: var(--primary-text-color-light-theme);
+}
+.title-dark-theme {
+  /* color: var(--primary-text-color-dark-theme); */
+  color: black;
 }
 /* =====HEADER===== */
 .menu-link {
@@ -76,7 +99,7 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
 
-  /* color: #ffffff; */
+  /* color: var(--primary-text-color-dark-theme); */
   color: black;
 }
 .menu-link:hover,
@@ -89,7 +112,7 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
 
-  /* color: #ffffff; */
+  /* color: var(--primary-text-color-dark-theme); */
   color: black;
 }
 .contact-phone-number:hover,
@@ -104,6 +127,100 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
 
-  /* color: #ffffff; */
+  /* color: var(--primary-text-color-dark-theme); */
   color: black;
+}
+/* =====ABOUT===== */
+.about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-light-theme);
+}
+/* =====SERVICES===== */
+.services-table-name,
+.services-table-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: right;
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-dark-theme);
+}
+/* =====ADVANTAGES===== */
+.advantages-list-quantity {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: var(--primary-text-color-light-theme);
+}
+.advantages-list-description {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: var(--primary-text-color-light-theme);
+}
+/* =====EMPLOYEES===== */
+.employees-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.9;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color-light-theme);
+}
+.employees-position {
+  font-size: 14px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+/* =====GALLERY===== */
+/* =====CONTACT INFO===== */
+.contact-info {
+  font-style: normal;
+}
+.contact-list-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-dark-theme);
+}
+.contact-list-link-bold {
+  font-weight: 700;
+}
+.contact-list-link:hover,
+.contact-list-link:focus {
+  color: var(--accent-color);
+}
+.contact-info-date {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-dark-theme);
+}
+/* =====FOOTER===== */
+.copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: var(--secondary-text-color-dark-theme);
 }
