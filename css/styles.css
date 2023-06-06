@@ -6,6 +6,7 @@
   --secondary-text-color-dark-theme: #9da4bd;
   --secondary-text-color-light-theme: #555555;
   --accent-color: #ff6c00;
+  --transition-dur-and-func: 250ms linear;
 }
 h1,
 h2,
@@ -73,9 +74,10 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  /* color: var(--primary-text-color-dark-theme); */
+  color: var(--primary-text-color-dark-theme);
   background-color: transparent;
-  color: black;
+
+  transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -153,6 +155,8 @@ body {
 }
 /* =====HEADER===== */
 .page-header {
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -162,8 +166,9 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
 
-  /* color: var(--primary-text-color-dark-theme); */
-  color: black;
+  color: var(--primary-text-color-dark-theme);
+
+  transition: color var(--transition-dur-and-func);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -175,11 +180,12 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
 
-  /* color: var(--primary-text-color-dark-theme); */
-  color: black;
+  color: var(--primary-text-color-dark-theme);
 
   margin-left: auto;
   margin-right: 40px;
+
+  transition: color var(--transition-dur-and-func);
 }
 .contact-phone-number:hover,
 .contact-phone-number:focus {
@@ -492,4 +498,63 @@ body {
   letter-spacing: 0.2em;
 
   color: var(--secondary-text-color-dark-theme);
+}
+
+/* =====BACKDROP===== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 1000;
+
+  transition: opacity 500ms ease-in-out, visibility 500ms linear;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ===== MODAL WINDOW ===== */
+.modal {
+  width: 528px;
+  height: 580px;
+  background-color: #fff;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #555555;
+  border-radius: 50%;
+  background-color: transparent;
+
+  transition: border-color var(--transition-dur-and-func);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  border-color: var(--accent-color);
+}
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--accent-color);
+}
+.modal-close-icon {
+  transition: fill var(--transition-dur-and-func);
 }
