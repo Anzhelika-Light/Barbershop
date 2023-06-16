@@ -1,0 +1,63 @@
+.employees-section {
+  background-color: #f7f7f7;
+}
+.employees-section-title {
+  margin-bottom: 44px;
+}
+.employees {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.employees-card {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.employees-content-wrapper {
+  padding-top: 30px;
+}
+.employees-name {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.9;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color-light-theme);
+}
+.employees-position {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+.social-list {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+.social-list-icon {
+  fill: #303030;
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: #303030;
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--accent-color);
+}

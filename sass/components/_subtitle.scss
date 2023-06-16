@@ -1,0 +1,25 @@
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.subtitle::before {
+  content: '';
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.6);
+  margin-right: 20px;
+}
+
+.subtitle-dark-theme {
+  color: rgba(157, 164, 189, 0.6);
+}
+.subtitle-light-theme {
+  color: var(--primary-text-color-light-theme);
+}

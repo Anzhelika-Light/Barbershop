@@ -1,0 +1,28 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+.about-left-side,
+.about-right-side {
+  flex-basis: calc((100% - 64px) / 2);
+}
+.about-gallery {
+  display: flex;
+  gap: 30px;
+}
+.about-title {
+  width: 450px;
+}
+.about-section-description {
+  margin-bottom: 20px;
+  width: 500px;
+}
+.about-text {
+  width: 490px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-light-theme);
+}

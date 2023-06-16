@@ -1,0 +1,28 @@
+.modal-btn {
+  min-width: 160px;
+  padding: 12px 20px;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: var(--primary-text-color-dark-theme);
+  background-color: transparent;
+
+  transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+.modal-btn-light-theme {
+  color: var(--primary-text-color-light-theme);
+}
+.modal-btn-dark-theme {
+  color: var(--primary-text-color-dark-theme);
+}

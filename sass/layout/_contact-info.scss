@@ -1,0 +1,118 @@
+.contact-sections {
+  display: flex;
+  justify-content: center;
+}
+.contact-form-section {
+  background-color: #191c26;
+  width: 100%;
+  padding-top: 130px;
+  padding-bottom: 193px;
+}
+.contact-form-section-container {
+  width: 655px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.contact-info-section-container {
+  width: 625px;
+  padding-left: 100px;
+  padding-right: 15px;
+}
+/* .contact-form-inputs-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  } */
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 44px;
+  flex-wrap: wrap;
+}
+.contact-form-field {
+  width: 270px;
+}
+.contact-form-field {
+  /* flex-basis: 50%; */
+  padding-bottom: 8px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+
+  color: rgba(157, 164, 189, 0.4);
+  transition: border-bottom-color 250ms ease;
+}
+.contact-form-field::placeholder {
+  text-transform: uppercase;
+  transition: color 250ms ease;
+}
+.contact-form-field:focus {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.contact-form-field:focus::placeholder {
+  color: #ffffff;
+}
+.contact-form-textarea {
+  width: 100%;
+  margin-bottom: 44px;
+  resize: none;
+  display: block;
+  padding-bottom: 60px;
+}
+.contact-info-section {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/contacts/contacts-info-bg.jpg');
+  background-size: cover;
+  background-color: #191c26;
+}
+.contact-info {
+  font-style: normal;
+}
+.contact-list {
+  margin-bottom: 70px;
+}
+.contact-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contact-list-link {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-dark-theme);
+}
+.contact-list-link-bold {
+  font-weight: 700;
+}
+.contact-list-link:hover,
+.contact-list-link:focus {
+  color: var(--accent-color);
+}
+.contact-list-icon {
+  margin-right: 20px;
+  stroke: currentColor;
+}
+.contact-info-date {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-dark-theme);
+}
