@@ -17,9 +17,8 @@
 }
 .employees-name {
   margin-bottom: 8px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.9;
+
+  @include font(18px, 400, 1.9);
 
   text-align: center;
   letter-spacing: 0.02em;
@@ -49,15 +48,17 @@
   height: 44px;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
+
+  &:hover,
+  &:focus {
+    background-color: #303030;
+  }
 }
 .social-list-icon {
   fill: #303030;
-}
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: #303030;
-}
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  fill: var(--accent-color);
+
+  .social-list-link:hover &,
+  .social-list-link:focus & {
+    fill: var(--accent-color);
+  }
 }

@@ -20,14 +20,13 @@
   min-height: 133px;
   padding: 21px;
   background-color: #f7f7f7;
-}
-.advantages-list-item:nth-child(even) {
-  margin-top: 30px;
+
+  &:nth-child(even) {
+    margin-top: 30px;
+  }
 }
 .advantages-list-quantity {
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.36;
+  @include font(42px, 700, 1.36);
   text-align: center;
   letter-spacing: 0.05em;
 
@@ -35,9 +34,7 @@
 }
 .advantages-list-description {
   width: 124px;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  @include font(11px, 600, 1.36);
   text-align: center;
 
   color: var(--primary-text-color-light-theme);

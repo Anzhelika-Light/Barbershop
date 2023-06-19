@@ -1,10 +1,12 @@
 @import './utils/variables';
 @import './utils/visually-hidden';
+@import './utils/mixins';
 
 @import './base/common';
 @import './base/section';
 @import './base/container';
 
+@import './components/contact-phone-number';
 @import './components/modal-btn';
 @import './components/media-list';
 @import './components/subtitle';

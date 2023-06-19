@@ -45,17 +45,21 @@
   background-color: transparent;
 
   transition: border-color var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  border-color: var(--accent-color);
-}
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
-  fill: var(--accent-color);
-}
+
 .modal-close-icon {
   transition: fill var(--transition-dur-and-func);
+
+  .modal-close-btn:hover &,
+  .modal-close-btn:focus & {
+    fill: var(--accent-color);
+  }
 }
 
 /* ===== MODAL FORM ===== */
@@ -170,9 +174,7 @@
   border: 1px solid #ff6c00;
   border-radius: 25px;
 
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
+  @include font(12px, 600, 1.33);
   letter-spacing: 0.09em;
   text-transform: uppercase;
 

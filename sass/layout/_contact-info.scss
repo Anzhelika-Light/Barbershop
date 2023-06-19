@@ -33,9 +33,6 @@
 }
 .contact-form-field {
   width: 270px;
-}
-.contact-form-field {
-  /* flex-basis: 50%; */
   padding-bottom: 8px;
   background-color: transparent;
   border: none;
@@ -44,25 +41,24 @@
 
   font-family: var(--primary-font);
   font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  @include font(11px, 600, 1.36);
 
   letter-spacing: 0.1em;
 
   color: rgba(157, 164, 189, 0.4);
   transition: border-bottom-color 250ms ease;
-}
-.contact-form-field::placeholder {
-  text-transform: uppercase;
-  transition: color 250ms ease;
-}
-.contact-form-field:focus {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-.contact-form-field:focus::placeholder {
-  color: #ffffff;
+
+  &::placeholder {
+    text-transform: uppercase;
+    transition: color 250ms ease;
+  }
+  &:focus {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+  }
+  &:focus::placeholder {
+    color: #ffffff;
+  }
 }
 .contact-form-textarea {
   width: 100%;
@@ -90,20 +86,19 @@
 .contact-list-link {
   display: flex;
   align-items: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
+  @include font(18px, 400, 1.67);
 
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color-dark-theme);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .contact-list-link-bold {
   font-weight: 700;
-}
-.contact-list-link:hover,
-.contact-list-link:focus {
-  color: var(--accent-color);
 }
 .contact-list-icon {
   margin-right: 20px;
