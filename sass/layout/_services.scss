@@ -21,7 +21,7 @@
     background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
   }
 }
-.services-table-row {
+.services-table__row {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -32,7 +32,6 @@
     height: 1px;
     margin-left: 6px;
     margin-right: 6px;
-    // background-color: red;
     background-color: rgba(157, 164, 189, 0.12);
   }
 
@@ -40,18 +39,18 @@
     margin-bottom: 20px;
   }
 }
-.services-table-name,
-.services-table-price {
+.services-table__name,
+.services-table__price {
   @include font(18px, 400, 1.67);
   text-align: right;
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color-dark-theme);
 }
-.services-table-name {
+.services-table__name {
   order: -1;
 }
-.services-modal-btn {
+.services__modal-btn {
   display: block;
   margin: 0 auto;
 }

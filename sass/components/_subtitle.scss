@@ -16,14 +16,14 @@
   }
 }
 
-.subtitle-dark-theme {
+.subtitle_theme_dark {
   color: var(--secondary-text-color-dark-theme);
 
   &::before {
     background-color: var(--secondary-text-color-dark-theme);
   }
 }
-.subtitle-light-theme {
+.subtitle_theme_light {
   color: var(--primary-text-color-light-theme);
 
   &::before {

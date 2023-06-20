@@ -2,9 +2,9 @@
   @include font(18px, 600, 1.67);
   letter-spacing: 0.02em;
 }
-.section-description-dark-theme {
+.section-description_theme_dark {
   color: var(--secondary-text-color-dark-theme);
 }
-.section-description-light-theme {
+.section-description_theme_light {
   color: var(--secondary-text-color-light-theme);
 }

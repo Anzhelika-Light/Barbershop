@@ -1,7 +1,7 @@
 .employees-section {
   background-color: #f7f7f7;
 }
-.employees-section-title {
+.employees-section__title {
   margin-bottom: 44px;
 }
 .employees {
@@ -9,13 +9,13 @@
   flex-wrap: wrap;
   gap: 30px;
 }
-.employees-card {
+.employees__card {
   flex-basis: calc((100% - 60px) / 3);
 }
-.employees-content-wrapper {
+.employees__content-wrapper {
   padding-top: 30px;
 }
-.employees-name {
+.employees__name {
   margin-bottom: 8px;
 
   @include font(18px, 400, 1.9);
@@ -25,7 +25,7 @@
 
   color: var(--primary-text-color-light-theme);
 }
-.employees-position {
+.employees__position {
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.36;
@@ -40,7 +40,7 @@
   column-gap: 10px;
   justify-content: center;
 }
-.social-list-link {
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,11 +54,11 @@
     background-color: #303030;
   }
 }
-.social-list-icon {
+.social-list__icon {
   fill: #303030;
 
-  .social-list-link:hover &,
-  .social-list-link:focus & {
+  .social-list__link:hover &,
+  .social-list__link:focus & {
     fill: var(--accent-color);
   }
 }

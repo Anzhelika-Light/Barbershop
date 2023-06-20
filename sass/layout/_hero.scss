@@ -1,15 +1,15 @@
-.hero-container {
+.hero__container {
   display: flex;
 }
-.hero-left-side {
+.hero_side_left {
   width: 100px;
 }
-.media-list-hero {
+.hero__media-list {
   position: absolute;
 
   transform: rotate(-90deg) translate(-480px, -110px);
 }
-.hero-right-side {
+.hero_side_right {
   flex-grow: 1;
   padding-left: 100px;
   padding-bottom: 206px;
@@ -31,6 +31,6 @@
 
   color: var(--primary-text-color-dark-theme);
 }
-.hero-section-description {
-  width: 370px;
+.hero__section-description {
+  width: 375px;
 }

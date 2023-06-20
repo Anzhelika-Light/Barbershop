@@ -1,4 +1,4 @@
-.gallery-subtitle {
+.gallery__subtitle {
   margin-bottom: 44px;
 }
 .gallery-list {
@@ -6,6 +6,6 @@
   flex-wrap: wrap;
   gap: 30px;
 }
-.gallery-list-item {
+.gallery-list__item {
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
