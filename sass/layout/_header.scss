@@ -1,36 +1,81 @@
-.page-header {
-  position: absolute;
-  width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.menu__link {
-  @include font(12px, 600, 1.33);
-  letter-spacing: 0.1em;
-
-  color: var(--primary-text-color-dark-theme);
-
-  transition: color var(--transition-dur-and-func);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+@media screen and (max-width: 767px) {
+  .menu,
+  .page-header__contact-phone-number,
+  .page-header__modal-btn {
+    display: none;
+  }
+  .mobile-menu-btn {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    line-height: 0;
+  }
+  .mobile-menu-btn__icon {
+    fill: #ffffff;
+    fill: black;
   }
 }
-.page-header__contact-phone-number {
-  margin-left: auto;
-  margin-right: 40px;
+
+.page-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .page-header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.page-navigation {
-  display: flex;
-  align-items: center;
-  column-gap: 70px;
+
+@media screen and (min-width: 768px) {
+  .page-header__contact-phone-number {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: none;
+  }
+  .page-navigation {
+    display: flex;
+    align-items: center;
+    column-gap: 70px;
+  }
+  .menu {
+    display: flex;
+    column-gap: 24px;
+  }
+  .menu__link {
+    @include font(12px, 600, 1.33);
+    letter-spacing: 0.1em;
+
+    color: var(--primary-text-color-dark-theme);
+    color: black;
+
+    transition: color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
 }
-.menu {
-  display: flex;
-  column-gap: 40px;
+
+@media screen and (min-width: 1200px) {
+  .page-header__contact-phone-number {
+    display: block;
+  }
+  .page-header {
+    position: absolute;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .page-header__container {
+    justify-content: flex-start;
+  }
+  .page-header__contact-phone-number {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .menu {
+    column-gap: 40px;
+  }
 }
