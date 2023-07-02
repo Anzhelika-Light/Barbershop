@@ -115,10 +115,50 @@
           <div class="about_side_left">
             <ul class="about-gallery list">
               <li class="about-gallery__item">
-                <img class="about-gallery__img" src="" alt="" width="270" height="445" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/about/about-img1-desktop.jpg    1x,
+                      ./images/about/about-img1-desktop@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/about/about-img1-tablet.jpg    1x,
+                      ./images/about/about-img1-tablet@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="about-gallery__img"
+                    src="./images/about/about-img1-desktop.jpg"
+                    alt="A barber doing his work"
+                  />
+                </picture>
               </li>
               <li class="about-gallery__item">
-                <img class="about-gallery__img" src="" alt="" width="270" height="445" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/about/about-img2-desktop.jpg    1x,
+                      ./images/about/about-img2-desktop@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/about/about-img2-tablet.jpg    1x,
+                      ./images/about/about-img2-tablet@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="about-gallery__img"
+                    src="./images/about/about-img2-desktop.jpg"
+                    alt="A barber doing his work"
+                  />
+                </picture>
               </li>
             </ul>
           </div>
@@ -141,7 +181,7 @@
         </div>
       </section> -->
       <!-- SERVICES -->
-      <!-- <section class="services section" id="services">
+      <section class="services section" id="services">
         <div class="container">
           <p class="subtitle subtitle_theme_dark">spend your time with the best masters</p>
           <h2 class="title title_theme_dark">Services and prices</h2>
@@ -187,7 +227,7 @@
             Online-booking
           </button>
         </div>
-      </section> -->
+      </section>
       <!-- ADVANTAGES -->
       <!-- <section class="advantages section">
         <div class="container advantages__container">
@@ -431,17 +471,22 @@
       <!-- <section class="contact-form-section">
           <div class="container contact-form-section__container">
             <h2 class="title title_theme_dark">Online-booking</h2>
-            <form class="contact-form"> -->
-      <!-- <div class="contact-form-inputs-wrapper"> -->
-      <!-- <input type="text" name="user_name" placeholder="name*" class="contact-form__field" />
-              <input
-                type="tel"
-                name="user_phone"
-                placeholder="phone*"
-                class="contact-form__field"
-              /> -->
-      <!-- </div> -->
-      <!-- <textarea
+            <form class="contact-form">
+              <div class="contact-form-inputs-wrapper">
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="name*"
+                  class="contact-form__field"
+                />
+                <input
+                  type="tel"
+                  name="user_phone"
+                  placeholder="phone*"
+                  class="contact-form__field"
+                />
+              </div>
+              <textarea
                 name="user_message"
                 placeholder="message"
                 class="contact-form__field contact-form__textarea"
@@ -490,8 +535,8 @@
             <h3 class="subtitle">working hours</h3>
             <p class="contact-info__date">Every day from 9:00 to 22:00</p>
           </div>
-        </section> -->
-      <!-- </div> -->
+        </section>
+      </div> -->
     </main>
     <!-- FOOTER -->
     <!-- <footer class="footer">
@@ -505,7 +550,7 @@
     </footer> -->
 
     <!-- BACKDROP -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
           <svg class="modal__close-icon" width="18" height="18">
@@ -569,9 +614,9 @@
           <button type="submit" class="modal-form__submit">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/mobile-menu.js"></script>
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

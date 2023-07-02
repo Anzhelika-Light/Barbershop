@@ -12,11 +12,12 @@
   }
   .mobile-menu-btn__icon {
     fill: #ffffff;
-    fill: black;
   }
 }
 
 .page-header {
+  position: absolute;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -47,7 +48,6 @@
     letter-spacing: 0.1em;
 
     color: var(--primary-text-color-dark-theme);
-    color: black;
 
     transition: color var(--transition-dur-and-func);
 
@@ -63,8 +63,6 @@
     display: block;
   }
   .page-header {
-    position: absolute;
-    width: 100%;
     padding-top: 32px;
     padding-bottom: 32px;
   }
