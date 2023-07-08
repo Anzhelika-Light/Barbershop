@@ -4,14 +4,19 @@
 .employees-section__title {
   margin-bottom: 44px;
 }
-.employees {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+
+@media screen and (max-width: 1199px) {
+  .employees {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .employees__photo {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
-.employees__card {
-  flex-basis: calc((100% - 60px) / 3);
-}
+
 .employees__content-wrapper {
   padding-top: 30px;
 }
@@ -60,5 +65,16 @@
   .social-list__link:hover &,
   .social-list__link:focus & {
     fill: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .employees {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .employees__card {
+    flex-basis: calc((100% - 60px) / 3);
   }
 }

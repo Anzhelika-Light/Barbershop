@@ -41,14 +41,16 @@
             <use href="./images/sprite.svg#icon-burger"></use>
           </svg>
         </button>
-        <a
-          class="contact-phone-number page-header__contact-phone-number link"
-          href="tel:+380441111111"
-          >+38 044 111 11 11</a
-        >
-        <button class="modal-btn page-header__modal-btn" type="button" data-modal-open>
-          Online-booking
-        </button>
+        <div class="wrapper">
+          <a
+            class="contact-phone-number page-header__contact-phone-number link"
+            href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button class="modal-btn page-header__modal-btn" type="button" data-modal-open>
+            Online-booking
+          </button>
+        </div>
       </div>
 
       <!-- Mobile menu -->
@@ -90,7 +92,7 @@
     </header>
     <main>
       <!-- HERO -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero__container">
           <div class="hero_side_left">
             <ul class="media-list hero__media-list list">
@@ -108,9 +110,9 @@
             </p>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- ABOUT -->
-      <!-- <section class="about section" id="about">
+      <section class="about section" id="about">
         <div class="container about__container">
           <div class="about_side_left">
             <ul class="about-gallery list">
@@ -179,7 +181,7 @@
             <button class="modal-btn modal-btn_theme_light" type="button">Online-booking</button>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- SERVICES -->
       <section class="services section" id="services">
         <div class="container">
@@ -229,9 +231,20 @@
         </div>
       </section>
       <!-- ADVANTAGES -->
-      <!-- <section class="advantages section">
+      <section class="advantages section">
         <div class="container advantages__container">
           <div class="advantages_side_left">
+            <p class="subtitle subtitle_theme_light">old traditional school</p>
+            <h2 class="title title_theme_light advantages__title">Why people come to us?</h2>
+            <p
+              class="section-description section-description_theme_light advantages__section-description"
+            >
+              Only good things are said about us. But it's better to see and feel 1 time than read
+              10 times.
+            </p>
+          </div>
+
+          <div class="advantages_side_right">
             <ul class="advantages-list list">
               <li class="advantages-list__item">
                 <p class="advantages-list__quantity">600</p>
@@ -251,26 +264,42 @@
               </li>
             </ul>
           </div>
-          <div class="advantages_side_right">
-            <p class="subtitle subtitle_theme_light">old traditional school</p>
-            <h2 class="title title_theme_light advantages__title">Why people come to us?</h2>
-            <p
-              class="section-description section-description_theme_light advantages__section-description"
-            >
-              Only good things are said about us. But it's better to see and feel 1 time than read
-              10 times.
-            </p>
-          </div>
         </div>
-      </section> -->
+      </section>
       <!-- EMPLOYEES -->
-      <!-- <section class="employees-section section" id="employees">
+      <section class="employees-section section" id="employees">
         <div class="container">
           <p class="subtitle subtitle_theme_light">for true enjoyers of the atmosphere</p>
           <h2 class="title title_theme_light employees-section__title">Our barbers</h2>
           <ul class="employees list">
             <li class="employees__card">
-              <img class="employees__photo" src="" alt="" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employees/img1-desktop.jpg    1x,
+                    ./images/employees/img1-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employees/img1-tablet.jpg    1x,
+                    ./images/employees/img1-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/employees/img1-mobile.jpg    1x,
+                    ./images/employees/img1-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="employees__photo"
+                  src="./images/employees/img1-mobile.jpg"
+                  alt="team member"
+                />
+              </picture>
               <div class="employees__content-wrapper">
                 <h3 class="employees__name">John Smith</h3>
                 <p class="employees__position">Extreme Barber</p>
@@ -327,7 +356,33 @@
               </div>
             </li>
             <li class="employees__card">
-              <img class="employees__photo" src="" alt="" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employees/img2-desktop.jpg    1x,
+                    ./images/employees/img2-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employees/img2-tablet.jpg    1x,
+                    ./images/employees/img2-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/employees/img2-mobile.jpg    1x,
+                    ./images/employees/img2-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="employees__photo"
+                  src="./images/employees/img2-mobile.jpg"
+                  alt="team member"
+                />
+              </picture>
               <div class="employees__content-wrapper">
                 <h3 class="employees__name">Michele Doe</h3>
                 <p class="employees__position">Extreme Barber</p>
@@ -384,7 +439,33 @@
               </div>
             </li>
             <li class="employees__card">
-              <img class="employees__photo" src="" alt="" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/employees/img3-desktop.jpg    1x,
+                    ./images/employees/img3-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/employees/img3-tablet.jpg    1x,
+                    ./images/employees/img3-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/employees/img3-mobile.jpg    1x,
+                    ./images/employees/img3-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="employees__photo"
+                  src="./images/employees/img3-mobile.jpg"
+                  alt="team member"
+                />
+              </picture>
               <div class="employees__content-wrapper">
                 <h3 class="employees__name">Alan Black</h3>
                 <p class="employees__position">Extreme Barber</p>
@@ -442,9 +523,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- GALLERY -->
-      <!-- <section class="gallery section">
+      <section class="gallery section">
         <div class="container">
           <p class="subtitle subtitle_theme_light gallery__subtitle">
             in Latin, "barba" means "beard"
@@ -452,23 +533,127 @@
           <h2 class="visually-hidden">Portfolio</h2>
           <ul class="gallery-list list">
             <li class="gallery-list__item">
-              <img class="gallery-list__img" src="" alt="" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img1-desktop.jpg    1x,
+                    ./images/gallery/gallery-img1-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img1-tablet.jpg    1x,
+                    ./images/gallery/gallery-img1-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-img1-mobile.jpg    1x,
+                    ./images/gallery/gallery-img1-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-list__img"
+                  src="./images/gallery/gallery-img1-mobile.jpg"
+                  alt="barber cutting a client's hair"
+                />
+              </picture>
             </li>
             <li class="gallery-list__item">
-              <img class="gallery-list__img" src="" alt="" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img2-desktop.jpg    1x,
+                    ./images/gallery/gallery-img2-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img2-tablet.jpg    1x,
+                    ./images/gallery/gallery-img2-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-img2-mobile.jpg    1x,
+                    ./images/gallery/gallery-img2-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-list__img"
+                  src="./images/gallery/gallery-img2-mobile.jpg"
+                  alt="barber shaves a client"
+                />
+              </picture>
             </li>
             <li class="gallery-list__item">
-              <img class="gallery-list__img" src="" alt="" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img3-desktop.jpg    1x,
+                    ./images/gallery/gallery-img3-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img3-tablet.jpg    1x,
+                    ./images/gallery/gallery-img3-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-img3-mobile.jpg    1x,
+                    ./images/gallery/gallery-img3-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-list__img"
+                  src="./images/gallery/gallery-img3-mobile.jpg"
+                  alt="barber serving a client"
+                />
+              </picture>
             </li>
             <li class="gallery-list__item">
-              <img class="gallery-list__img" src="" alt="" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/gallery-img4-desktop.jpg    1x,
+                    ./images/gallery/gallery-img4-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-img4-tablet.jpg    1x,
+                    ./images/gallery/gallery-img4-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./images/gallery/gallery-img4-mobile.jpg    1x,
+                    ./images/gallery/gallery-img4-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="gallery-list__img"
+                  src="./images/gallery/gallery-img4-mobile.jpg"
+                  alt="barber cutting a client's hair"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <div id="contacts" class="contact-sections"> -->
-      <!-- CONTACT-FORM -->
-      <!-- <section class="contact-form-section">
+      </section>
+      <div id="contacts" class="contact-sections">
+        <!-- CONTACT-FORM -->
+        <section class="contact-form-section section">
           <div class="container contact-form-section__container">
             <h2 class="title title_theme_dark">Online-booking</h2>
             <form class="contact-form">
@@ -491,55 +676,64 @@
                 placeholder="message"
                 class="contact-form__field contact-form__textarea"
               ></textarea>
-              <button type="submit" class="modal-btn modal-btn_theme_dark">send</button>
+              <button
+                type="submit"
+                class="modal-btn modal-btn_theme_dark contact-form-section__modal-btn"
+              >
+                send
+              </button>
             </form>
           </div>
-        </section> -->
-      <!-- CONTACT-INFORMATION -->
-      <!-- <section class="contact-info-section section">
+        </section>
+        <!-- CONTACT-INFORMATION -->
+        <section class="contact-info-section section">
           <div class="container contact-info-section__container">
             <h2 class="title title_theme_dark">Contacts</h2>
-            <address class="contact-info">
-              <ul class="contact-list list">
-                <li class="contact-list__item">
-                  <a
-                    class="contact-list__link contact-list-link-bold link"
-                    href="https://goo.gl/maps/fSdhoyAyDwtJdrEC6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg class="contact-list__icon" width="24" height="24">
-                      <use href="./images/sprite.svg#map-pin"></use>
-                    </svg>
-                    st. Vasilkovaya, 7A Kiev, 08132</a
-                  >
-                </li>
-                <li class="contact-list__item">
-                  <a class="contact-list__link link" href="tel:+380441111111">
-                    <svg class="contact-list__icon" width="24" height="24">
-                      <use href="./images/sprite.svg#phone"></use>
-                    </svg>
-                    +38 044 111 11 11</a
-                  >
-                </li>
-                <li class="contact-list__item">
-                  <a class="contact-list__link" href="mailto:barbershop@email.com">
-                    <svg class="contact-list__icon" width="24" height="24">
-                      <use href="./images/sprite.svg#mail"></use>
-                    </svg>
-                    barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <h3 class="subtitle">working hours</h3>
-            <p class="contact-info__date">Every day from 9:00 to 22:00</p>
+            <div class="contact-info-section__info-wrapper">
+              <address class="contact-info">
+                <ul class="contact-list list">
+                  <li class="contact-list__item">
+                    <a
+                      class="contact-list__link contact-list-link-bold link"
+                      href="https://goo.gl/maps/fSdhoyAyDwtJdrEC6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="contact-list__icon" width="24" height="24">
+                        <use href="./images/sprite.svg#map-pin"></use>
+                      </svg>
+                      st. Vasilkovaya, 7A Kiev, 08132</a
+                    >
+                  </li>
+                  <li class="contact-list__item">
+                    <a class="contact-list__link link" href="tel:+380441111111">
+                      <svg class="contact-list__icon" width="24" height="24">
+                        <use href="./images/sprite.svg#phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="contact-list__item">
+                    <a class="contact-list__link" href="mailto:barbershop@email.com">
+                      <svg class="contact-list__icon" width="24" height="24">
+                        <use href="./images/sprite.svg#mail"></use>
+                      </svg>
+                      barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <div class="contact-info__wrapper">
+                <h3 class="subtitle subtitle_theme_dark">working hours</h3>
+                <p class="contact-info__date">Every day from 9:00 to 22:00</p>
+              </div>
+            </div>
           </div>
         </section>
-      </div> -->
+      </div>
     </main>
     <!-- FOOTER -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <p class="copyright">&#xa9; Copyright 2020</p>
         <ul class="media-list list">
@@ -547,7 +741,7 @@
           <li class="media-list__item"><a class="media-list__link link" href="">Youtube</a></li>
         </ul>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- BACKDROP -->
     <div class="backdrop is-hidden" data-modal>

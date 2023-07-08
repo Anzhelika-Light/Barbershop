@@ -1,38 +1,20 @@
-.contact-sections {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 767px) {
+  .contact-form__field {
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 44px;
+    }
+  }
 }
+
 .contact-form-section {
   background-color: #191c26;
-  width: 100%;
-  padding-top: 130px;
-  padding-bottom: 193px;
 }
-.contact-form-section__container {
-  width: 655px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.contact-info-section__container {
-  width: 625px;
-  padding-left: 100px;
-  padding-right: 15px;
-}
-/* .contact-form-inputs-wrapper {
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    margin-bottom: 44px;
-  } */
-.contact-form {
-  display: flex;
-  justify-content: space-between;
-  row-gap: 44px;
-  flex-wrap: wrap;
-}
+
 .contact-form__field {
-  width: 270px;
+  display: block;
+  width: 100%;
   padding-bottom: 8px;
   background-color: transparent;
   border: none;
@@ -62,10 +44,15 @@
 }
 .contact-form__textarea {
   width: 100%;
+  margin-top: 44px;
   margin-bottom: 44px;
   resize: none;
   display: block;
   padding-bottom: 60px;
+}
+.contact-form-section__modal-btn {
+  display: block;
+  margin: 0 auto;
 }
 .contact-info-section {
   width: 100%;
@@ -78,7 +65,7 @@
   font-style: normal;
 }
 .contact-list {
-  margin-bottom: 70px;
+  margin-bottom: 44px;
 }
 .contact-list__item:not(:last-child) {
   margin-bottom: 20px;
@@ -110,4 +97,59 @@
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color-dark-theme);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form-inputs-wrapper {
+    display: flex;
+    column-gap: 30px;
+    // justify-content: space-between;
+    margin-bottom: 44px;
+  }
+  .contact-form__field {
+    width: 330px;
+  }
+  .contact-form__textarea {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-info-section__info-wrapper {
+    display: flex;
+    column-gap: 100px;
+    // justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-sections {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-form-section {
+    padding-bottom: 193px;
+    width: calc(100% / 2 + 30px / 2);
+  }
+  .contact-info-section {
+    width: calc(100% / 2 - 30px / 2);
+  }
+  .contact-form-section__container {
+    width: 590px;
+    margin: 0 auto;
+  }
+  .contact-info-section__container {
+    width: 580px;
+    padding-left: 100px;
+  }
+  .contact-form__field {
+    width: 270px;
+  }
+  .contact-form__textarea {
+    width: 100%;
+  }
+  .contact-list {
+    margin-bottom: 70px;
+    max-width: 230px;
+  }
 }
