@@ -1,5 +1,65 @@
-@mixin font($fs, $fw, $lh) {
+@mixin font($fs: 11px, $fw: 600, $lh: 1.36) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
+}
+
+@mixin flex($d: flex, $jc: center, $ai: center) {
+  display: $d;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin mobile-only {
+  @media screen and (max-width: $mobile-end) {
+    @content;
+  }
+}
+
+@mixin mobile-only-retina {
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-start) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: $tablet-start) and (max-width: $tablet-end) {
+    @content;
+  }
+}
+
+@mixin tablet-retina {
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-start) {
+    @content;
+  }
+}
+
+@mixin desktop-retina {
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin except-desktop {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
 }

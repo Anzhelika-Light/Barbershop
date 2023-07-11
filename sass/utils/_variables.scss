@@ -8,3 +8,9 @@
   --accent-color: #ff6c00;
   --transition-dur-and-func: 250ms linear;
 }
+
+$mobile-start: 320px;
+$mobile-end: 767px;
+$tablet-start: 768px;
+$tablet-end: 1199px;
+$desktop-start: 1200px;

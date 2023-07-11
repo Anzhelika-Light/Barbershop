@@ -3,7 +3,7 @@
   align-items: center;
   margin-bottom: 20px;
 
-  @include font(11px, 600, 1.36);
+  @include font;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 

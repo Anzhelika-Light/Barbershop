@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@include mobile-only {
   .menu,
   .page-header__contact-phone-number,
   .page-header__modal-btn {
@@ -25,23 +25,22 @@
   padding-bottom: 40px;
 }
 .page-header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(flex, space-between);
+  flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) {
-  .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 20px;
-    justify-content: end;
-    align-items: center;
-  }
+@include tablet-only {
   .page-header__contact-phone-number {
     display: block;
-    display: none;
-    // order: 1;
+    order: 1;
+  }
+}
+
+@include tablet {
+  .page-header__contact-phone-number {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
   }
   .mobile-menu-btn {
     display: none;
@@ -70,7 +69,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
   .page-header__contact-phone-number {
     display: block;
   }
@@ -78,23 +77,10 @@
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  // .page-header__container {
-  //   justify-content: flex-start;
-  // }
-  // .page-header__contact-phone-number {
-  //   margin-left: auto;
-  //   margin-right: 40px;
-  // }
   .page-navigation {
     column-gap: 70px;
   }
   .menu {
     column-gap: 40px;
-  }
-  .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
   }
 }

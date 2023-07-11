@@ -8,12 +8,14 @@
 .section-description_theme_light {
   color: var(--secondary-text-color-light-theme);
 }
-@media screen and (max-width: 767px) {
+
+@include mobile-only {
   .section-description {
     max-width: 418px;
   }
 }
-@media screen and (min-width: 1200px) {
+
+@include desktop {
   .section-description {
     @include font(18px, 600, 1.67);
   }

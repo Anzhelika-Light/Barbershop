@@ -3,25 +3,16 @@
   padding-bottom: 44px;
 }
 .copyright {
-  @include font(11px, 600, 1.36);
+  @include font;
   letter-spacing: 0.2em;
 
   color: var(--secondary-text-color-dark-theme);
 }
 .footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    padding-top: 56px;
-    padding-bottom: 56px;
-    background-color: #f7f7f7;
-  }
+  @include flex(flex, space-between);
 }
 
-@media screen and (max-width: 767px) {
+@include mobile-only {
   .footer__container {
     flex-direction: column;
     gap: 20px;
@@ -30,5 +21,13 @@
   .copyright {
     order: 1;
     align-self: start;
+  }
+}
+
+@include tablet {
+  .footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    background-color: #f7f7f7;
   }
 }

@@ -13,7 +13,7 @@
 }
 
 .media-list__link {
-  @include font(11px, 600, 1.36);
+  @include font;
   letter-spacing: 0.2em;
 
   color: var(--primary-text-color-light-theme);

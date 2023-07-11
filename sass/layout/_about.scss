@@ -1,8 +1,9 @@
-@media screen and (max-width: 767px) {
+@include mobile-only {
   .about_side_left {
     display: none;
   }
 }
+
 .about__title {
   max-width: 370px;
 }
@@ -20,7 +21,7 @@
   color: var(--secondary-text-color-light-theme);
 }
 
-@media screen and (min-width: 768px) {
+@include tablet {
   .about__container {
     display: flex;
     justify-content: space-between;
@@ -40,7 +41,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
   .about_side_left,
   .about_side_right {
     flex-basis: calc((100% - 64px) / 2);

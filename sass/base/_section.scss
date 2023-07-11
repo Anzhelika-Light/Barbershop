@@ -3,14 +3,14 @@
   padding-bottom: 84px;
 }
 
-@media screen and (min-width: 768px) {
+@include tablet {
   .section {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
   .section {
     padding-top: 130px;
     padding-bottom: 130px;
