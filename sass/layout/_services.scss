@@ -67,7 +67,8 @@
 }
 
 .services-table__row {
-  @include flex(flex, space-between, baseline);
+  // @include flex(flex, space-between, baseline);
+  @include flexBox(space-between, baseline);
 
   &::before {
     content: '';

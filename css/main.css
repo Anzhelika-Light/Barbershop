@@ -334,11 +334,6 @@ body {
 }
 
 /* ===== MODAL FORM ===== */
-.modal-form {
-  display: flex;
-  flex-direction: column;
-}
-
 .modal-form__capture {
   font-size: 20px;
   font-weight: 700;
@@ -348,6 +343,7 @@ body {
 }
 
 .modal-form__field {
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -361,6 +357,11 @@ body {
 .modal-form__input-wrapper {
   position: relative;
   display: block;
+}
+
+.modal-form__input-desc {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .modal-form__input {
@@ -443,7 +444,8 @@ body {
 }
 
 .modal-form__submit {
-  align-self: center;
+  display: block;
+  margin: 0 auto;
   min-width: 160px;
   padding: 12px 20px;
   border: 1px solid #ff6c00;
@@ -769,7 +771,6 @@ body {
 .services-table__row {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
 }
 .services-table__row::before {
   content: "";
@@ -831,10 +832,6 @@ body {
     line-height: 1.67;
   }
 }
-/* .advantages-left-side,
-  .advantages-right-side {
-    flex-basis: calc((100% - 30px) / 2);
-  } */
 .advantages-list {
   display: flex;
   justify-content: center;
@@ -842,7 +839,8 @@ body {
   flex-wrap: wrap;
   column-gap: 30px;
   max-width: 370px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .advantages-list__item {
@@ -888,16 +886,14 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .advantages__container {
-    display: flex;
-    flex-direction: column;
-  }
   .advantages__section-description {
     width: 500px;
   }
   .advantages_side_right {
-    align-self: end;
     margin-top: 44px;
+  }
+  .advantages-list {
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -921,10 +917,8 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .employees {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+  .employees__card:not(:last-child) {
+    margin-bottom: 64px;
   }
   .employees__photo {
     margin: 0 auto;

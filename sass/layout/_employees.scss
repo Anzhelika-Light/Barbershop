@@ -6,11 +6,10 @@
 }
 
 @include except-desktop {
-  .employees {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+  .employees__card:not(:last-child) {
+    margin-bottom: 64px;
   }
+
   .employees__photo {
     margin: 0 auto;
     max-width: 100%;
@@ -46,7 +45,7 @@
   justify-content: center;
 }
 .social-list__link {
-  @include flex;
+  @include flexBox(center, center);
   width: 44px;
   height: 44px;
   border-radius: 50%;

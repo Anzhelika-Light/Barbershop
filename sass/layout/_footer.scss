@@ -9,7 +9,7 @@
   color: var(--secondary-text-color-dark-theme);
 }
 .footer__container {
-  @include flex(flex, space-between);
+  @include flexBox(space-between, center);
 }
 
 @include mobile-only {

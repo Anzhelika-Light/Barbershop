@@ -10,6 +10,22 @@
   align-items: $ai;
 }
 
+@mixin flexBox($justifyValue: flex-start, $alignValue: baseline, $direction: row) {
+  display: flex;
+
+  @if $justifyValue != flex-start {
+    justify-content: $justifyValue;
+  }
+
+  @if $alignValue != baseline {
+    align-items: $alignValue;
+  }
+
+  @if $direction != row {
+    flex-direction: $direction;
+  }
+}
+
 @mixin mobile-only {
   @media screen and (max-width: $mobile-end) {
     @content;

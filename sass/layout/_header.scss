@@ -25,7 +25,7 @@
   padding-bottom: 40px;
 }
 .page-header__container {
-  @include flex(flex, space-between);
+  @include flexBox(space-between, center);
   flex-wrap: wrap;
 }
 

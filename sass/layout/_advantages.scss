@@ -1,14 +1,11 @@
-/* .advantages-left-side,
-  .advantages-right-side {
-    flex-basis: calc((100% - 30px) / 2);
-  } */
-
 .advantages-list {
-  @include flex(flex, center, flex-start);
+  @include flexBox(center, flex-start);
   flex-wrap: wrap;
   column-gap: 30px;
   max-width: 370px;
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .advantages-list__item {
   max-width: 170px;
@@ -51,16 +48,14 @@
 }
 
 @include tablet-only {
-  .advantages__container {
-    display: flex;
-    flex-direction: column;
-  }
   .advantages__section-description {
     width: 500px;
   }
   .advantages_side_right {
-    align-self: end;
     margin-top: 44px;
+  }
+  .advantages-list {
+    margin-right: 0;
   }
 }
 
