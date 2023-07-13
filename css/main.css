@@ -612,9 +612,15 @@ body {
   }
   .hero__media-list {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 0;
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  .hero__media-list::before {
+    transform: rotate(90deg);
+    margin-bottom: 40px;
   }
   .hero_side_right {
     flex-grow: 1;
