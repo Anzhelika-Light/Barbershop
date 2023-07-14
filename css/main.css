@@ -42,6 +42,11 @@ img {
   display: block;
 }
 
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   list-style: none;
 }
@@ -604,10 +609,11 @@ body {
 @media screen and (min-width: 768px) {
   .hero__container {
     display: flex;
+    column-gap: 28px;
   }
   .hero_side_left {
     display: block;
-    width: 100px;
+    flex: 0 0 85px;
     position: relative;
   }
   .hero__media-list {
@@ -777,6 +783,7 @@ body {
 .services-table__row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .services-table__row::before {
   content: "";
@@ -785,6 +792,8 @@ body {
   margin-left: 6px;
   margin-right: 6px;
   background-color: rgba(157, 164, 189, 0.12);
+  position: relative;
+  top: -9px;
 }
 .services-table__row:not(:last-child) {
   margin-bottom: 20px;

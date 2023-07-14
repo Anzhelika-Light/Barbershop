@@ -68,7 +68,8 @@
 
 .services-table__row {
   // @include flex(flex, space-between, baseline);
-  @include flexBox(space-between, baseline);
+  @include flexBox(space-between, flex-end);
+  // @include flexBox(space-between, baseline);
 
   &::before {
     content: '';
@@ -77,6 +78,8 @@
     margin-left: 6px;
     margin-right: 6px;
     background-color: rgba(157, 164, 189, 0.12);
+    position: relative;
+    top: -9px;
   }
 
   &:not(:last-child) {

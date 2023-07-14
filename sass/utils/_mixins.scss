@@ -4,11 +4,11 @@
   line-height: $lh;
 }
 
-// @mixin flex($d: flex, $jc: center, $ai: center) {
-//   display: $d;
-//   justify-content: $jc;
-//   align-items: $ai;
-// }
+@mixin flex($d: flex, $jc: center, $ai: center) {
+  display: $d;
+  justify-content: $jc;
+  align-items: $ai;
+}
 
 @mixin flexBox($justifyValue: flex-start, $alignValue: baseline, $direction: row) {
   display: flex;
